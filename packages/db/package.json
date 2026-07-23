@@ -1,0 +1,22 @@
+{
+  "name": "@metapulse/db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Mongoose models, the typed-in-spirit error hierarchy, and the tenancy helper that is the single source of truth for 'is this user allowed to touch this workspace' — the app-layer replacement for Postgres RLS.",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@metapulse/schemas": "workspace:*",
+    "mongoose": "^9.8.0"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.10"
+  }
+}

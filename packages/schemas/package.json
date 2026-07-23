@@ -1,0 +1,21 @@
+{
+  "name": "@metapulse/schemas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Zod contracts shared across api, worker, and client. Single source of truth for shapes crossing a process boundary — no TypeScript types here, the Zod schema itself is both the runtime validator and the documentation.",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.10"
+  }
+}

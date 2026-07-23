@@ -1,0 +1,24 @@
+{
+  "name": "@metapulse/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Polls the Mongo-native job queue and runs the Content/Engagement graphs. Runs with zero, one, or both AI providers configured — same resilience story as the API, at the process that actually calls the model.",
+  "main": "./src/index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "lint": "eslint src",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@metapulse/db": "workspace:*",
+    "@metapulse/model-router": "workspace:*",
+    "@metapulse/agents": "workspace:*",
+    "dotenv": "^17.4.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.10"
+  }
+}

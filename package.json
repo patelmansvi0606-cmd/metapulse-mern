@@ -1,0 +1,25 @@
+{
+  "name": "metapulse-mern",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "AI-native marketing automation platform for the Meta ecosystem — MERN port (MongoDB, Express, React, Node) of the original Next.js/Supabase build. Plain JavaScript, ES modules throughout.",
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{js,jsx,md,json}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,md,json}\""
+  },
+  "devDependencies": {
+    "turbo": "^2.10.5",
+    "prettier": "^3.9.6",
+    "eslint": "^10.7.0",
+    "@eslint/js": "^10.0.1",
+    "globals": "^17.7.0"
+  }
+}

@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/**
+ * Six brand hex values are fixed — carried over from the original
+ * build, not reinvented here. --color-canvas and --color-ink are the
+ * two additions: a pure 6-tone warm palette has nothing calm enough
+ * for a page background or dense enough for body text, so these round
+ * it out without introducing an off-brand neutral gray.
+ */
+@theme {
+  --color-canvas: #fff8f3;
+  --color-canvas-wash: #ffbb94;
+  --color-rose: #fb9590;
+  --color-coral: #dc586d;
+  --color-berry: #a33757;
+  --color-wine: #852e4e;
+  --color-plum: #4c1d3d;
+  --color-ink: #2b1620;
+  --color-border-warm: #f0d6c4;
+
+  --font-display: "Fraunces", ui-serif, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    color: var(--color-plum);
+  }
+
+  /* Preflight resets button cursor to default in Tailwind v4 — restore
+     the pointer, since every button here is a real click target. */
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+
+  /* Visible keyboard focus everywhere, not just on inputs the browser defaults to. */
+  :focus-visible {
+    outline: 2px solid var(--color-coral);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .mp-field {
+    @apply w-full rounded-lg border border-border-warm bg-canvas px-3.5 py-2.5 text-sm text-ink outline-none;
+  }
+  .mp-field:focus {
+    @apply ring-2 ring-coral;
+  }
+}
