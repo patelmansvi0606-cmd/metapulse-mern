@@ -6,6 +6,15 @@
  * two additions: a pure 6-tone warm palette has nothing calm enough
  * for a page background or dense enough for body text, so these round
  * it out without introducing an off-brand neutral gray.
+<<<<<<< HEAD
+ *
+ * The brand-* names below are aliases onto the same values (plus one
+ * new addition, brand-muted) — added for the landing page, which was
+ * designed against this naming. Existing app pages (Dashboard, Studio,
+ * etc.) keep using the original names below untouched; both resolve
+ * to the same palette, so nothing about them needed to change.
+=======
+>>>>>>> 64c3c44eb5acaf338a9cfcb7bf034ad0b9d71942
  */
 @theme {
   --color-canvas: #fff8f3;
@@ -18,8 +27,26 @@
   --color-ink: #2b1620;
   --color-border-warm: #f0d6c4;
 
+<<<<<<< HEAD
+  --color-brand-primary: #dc586d;
+  --color-brand-secondary: #a33757;
+  --color-brand-dark: #852e4e;
+  --color-brand-darkest: #4c1d3d;
+  --color-brand-soft: #fb9590;
+  --color-brand-light: #ffbb94;
+  --color-brand-bg: #fff8f6;
+  --color-brand-text: #2a1b26;
+  --color-brand-muted: #6b5563;
+
+  /* One typographic voice site-wide, weight differentiates headings
+     from body rather than a separate display face — matches the
+     landing page design, which the app pages now share. */
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+=======
   --font-display: "Fraunces", ui-serif, serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+>>>>>>> 64c3c44eb5acaf338a9cfcb7bf034ad0b9d71942
 }
 
 @layer base {
@@ -48,6 +75,24 @@
     outline: 2px solid var(--color-coral);
     outline-offset: 2px;
   }
+<<<<<<< HEAD
+
+  /* Custom scrollbar - from the landing page design, applied site-wide for consistency */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-brand-bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-brand-soft);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-brand-primary);
+  }
+=======
+>>>>>>> 64c3c44eb5acaf338a9cfcb7bf034ad0b9d71942
 }
 
 @layer components {
@@ -57,4 +102,89 @@
   .mp-field:focus {
     @apply ring-2 ring-coral;
   }
+<<<<<<< HEAD
+
+  /* --- Landing page: glassmorphism, gradients, motion --- */
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(220, 88, 109, 0.12);
+  }
+
+  .glass-panel-dark {
+    background: rgba(76, 29, 61, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(251, 149, 144, 0.2);
+  }
+
+  .gradient-btn {
+    background: linear-gradient(135deg, #dc586d 0%, #a33757 100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .gradient-btn:hover {
+    background: linear-gradient(135deg, #fb9590 0%, #dc586d 100%);
+    box-shadow: 0 10px 25px -5px rgba(220, 88, 109, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #4c1d3d 0%, #dc586d 50%, #a33757 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .shadow-glass {
+    box-shadow:
+      0 20px 40px -15px rgba(133, 46, 78, 0.07),
+      0 0 10px rgba(220, 88, 109, 0.05);
+  }
+  .shadow-glass-hover {
+    box-shadow:
+      0 30px 60px -20px rgba(133, 46, 78, 0.15),
+      0 0 20px rgba(220, 88, 109, 0.1);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+}
+@keyframes float-medium {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
+}
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+.animate-float-medium {
+  animation: float-medium 6s ease-in-out infinite;
+}
+.animate-glow {
+  animation: pulse-glow 6s ease-in-out infinite;
+=======
+>>>>>>> 64c3c44eb5acaf338a9cfcb7bf034ad0b9d71942
 }

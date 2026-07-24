@@ -160,4 +160,8 @@ export function StudioPage() {
       </main>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 64c3c44eb5acaf338a9cfcb7bf034ad0b9d71942

@@ -72,4 +72,8 @@ export const qualityResultSchema = z.object({
 /** A human overriding the pipeline's outcome — approving/rejecting directly, whether it landed in in_review or even a genuine AI rejection. */
 export const manualReviewDecisionSchema = z.object({
   decision: z.enum(["approved", "rejected"]),
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 64c3c44eb5acaf338a9cfcb7bf034ad0b9d71942

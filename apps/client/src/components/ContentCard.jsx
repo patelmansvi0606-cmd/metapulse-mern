@@ -144,4 +144,8 @@ function ReasonRow({ label, usedFallback, passed, detail }) {
       {detail && <span className="text-ink/60"> — {detail}</span>}
     </p>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 64c3c44eb5acaf338a9cfcb7bf034ad0b9d71942
